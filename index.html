@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="عرض تقديمي تفاعلي عن الذكاء الاصطناعي في حياتنا">
+  <title>الذكاء الاصطناعي في حياتنا</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23111827'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%2338BDF8' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%238B5CF6'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="22" height="22" rx="7"></rect>
+            <circle cx="20" cy="20" r="4" fill="currentColor" stroke="none"></circle>
+            <path d="M20 9v5M20 26v5M9 20h5M26 20h5"></path>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-title">الذكاء الاصطناعي في حياتنا</span>
+          <span class="brand-subtitle">عرض تقديمي تفاعلي</span>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <div class="slide-counter" dir="ltr" role="status" aria-live="polite" aria-atomic="true">
+          <span id="currentSlide">1</span><span class="counter-sep">/</span><span id="totalSlides">6</span>
+        </div>
+        <button id="fullscreenBtn" class="icon-btn" type="button" aria-label="تفعيل وضع العرض الكامل" aria-pressed="false" title="وضع العرض الكامل">
+          <svg class="icon icon--expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path>
+          </svg>
+          <svg class="icon icon--compress" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 8h5V3M21 8h-5V3M3 16h5v5M21 16h-5v5"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="stage" id="stage">
+      <div class="slides" id="slides">
+
+        <!-- Slide 1: Cover -->
+        <section class="slide slide--cover is-active" data-slide="1" data-title="الغلاف" aria-label="الشريحة 1: الغلاف">
+          <div class="slide-inner cover-grid">
+            <div class="cover-copy">
+              <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>عرض تقديمي تفاعلي</p>
+              <h1 class="cover-title">الذكاء الاصطناعي<br><span>في حياتنا</span></h1>
+              <p class="cover-english" dir="ltr">Artificial Intelligence in Our Lives</p>
+              <p class="cover-subtitle">كيف يغير الذكاء الاصطناعي عالمنا وطريقة عيشنا؟</p>
+              <div class="cover-hint">
+                <span class="hint-key" aria-hidden="true">←</span>
+                <span>استخدم الأسهم أو اسحب الشاشة للتنقل بين الشرائح</span>
+              </div>
+            </div>
+
+            <div class="cover-visual" aria-hidden="true">
+              <svg class="ai-art" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <defs>
+                  <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".85"></stop>
+                    <stop offset="55%" stop-color="#38BDF8" stop-opacity=".35"></stop>
+                    <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <linearGradient id="ringGradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#38BDF8"></stop>
+                    <stop offset="100%" stop-color="#8B5CF6"></stop>
+                  </linearGradient>
+                  <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#38BDF8" stop-opacity=".25"></stop>
+                    <stop offset="50%" stop-color="#8B5CF6" stop-opacity=".9"></stop>
+                    <stop offset="100%" stop-color="#38BDF8" stop-opacity=".25"></stop>
+                  </linearGradient>
+                  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+                    <feGaussianBlur stdDeviation="7" result="blur"></feGaussianBlur>
+                    <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                  </filter>
+                </defs>
+                <circle cx="260" cy="260" r="190" fill="url(#coreGlow)" opacity=".55"></circle>
+                <circle class="orbit orbit--spin orbit--slow" cx="260" cy="260" r="168" fill="none" stroke="url(#ringGradient)" stroke-width="1.4" stroke-dasharray="3 12" opacity=".7"></circle>
+                <circle class="orbit orbit--spin orbit--fast" cx="260" cy="260" r="126" fill="none" stroke="url(#ringGradient)" stroke-width="1.6" opacity=".5"></circle>
+                <ellipse class="orbit orbit--tilt" cx="260" cy="260" rx="196" ry="76" fill="none" stroke="#38BDF8" stroke-width="1.2" opacity=".4" transform="rotate(-26 260 260)"></ellipse>
+                <ellipse class="orbit orbit--tilt-alt" cx="260" cy="260" rx="196" ry="76" fill="none" stroke="#8B5CF6" stroke-width="1.2" opacity=".35" transform="rotate(34 260 260)"></ellipse>
+                <g fill="none" stroke="url(#lineGradient)" stroke-width="1.5" opacity=".85">
+                  <path d="M126 206 L260 260 L392 188"></path>
+                  <path d="M150 342 L260 260 L374 350"></path>
+                  <path d="M206 118 L260 260 L318 402"></path>
+                  <path d="M126 206 L150 342 M392 188 L374 350"></path>
+                </g>
+                <g filter="url(#glow)">
+                  <circle class="pulse-node" cx="126" cy="206" r="6" fill="#38BDF8"></circle>
+                  <circle class="pulse-node pulse-node--delay" cx="392" cy="188" r="6" fill="#8B5CF6"></circle>
+                  <circle class="pulse-node pulse-node--delay2" cx="150" cy="342" r="5.5" fill="#8B5CF6"></circle>
+                  <circle class="pulse-node" cx="374" cy="350" r="5.5" fill="#38BDF8"></circle>
+                  <circle class="pulse-node pulse-node--delay" cx="206" cy="118" r="4.5" fill="#38BDF8"></circle>
+                  <circle class="pulse-node pulse-node--delay2" cx="318" cy="402" r="4.5" fill="#8B5CF6"></circle>
+                </g>
+                <g>
+                  <circle cx="260" cy="260" r="62" fill="#172554" fill-opacity=".7" stroke="url(#ringGradient)" stroke-width="1.8"></circle>
+                  <rect x="234" y="234" width="52" height="52" rx="15" fill="#111827" stroke="url(#ringGradient)" stroke-width="2"></rect>
+                  <rect x="248" y="248" width="24" height="24" rx="6" fill="none" stroke="#38BDF8" stroke-width="2"></rect>
+                  <path d="M244 260h-12M276 260h12M260 244v-12M260 276v12" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+              </svg>
+              <span class="visual-label" dir="ltr">NEURAL · LEARNING · VISION</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 2: What is AI? -->
+        <section class="slide" data-slide="2" data-title="ما هو الذكاء الاصطناعي؟" aria-label="الشريحة 2: ما هو الذكاء الاصطناعي؟">
+          <div class="slide-inner split">
+            <div class="copy">
+              <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>المفهوم الأساسي</p>
+              <h2 class="slide-title">ما هو الذكاء الاصطناعي؟</h2>
+              <p class="lead">الذكاء الاصطناعي مجال من مجالات علوم الحاسوب يهدف إلى تطوير أنظمة قادرة على أداء مهام تحتاج عادةً إلى ذكاء بشري، مثل التعلّم وفهم اللغة والتعرّف على الأنماط وحل المشكلات.</p>
+              <div class="note">
+                <span class="note-icon" aria-hidden="true">✦</span>
+                <p>ببساطة: تقليد قدرات التفكير البشري باستخدام البيانات والخوارزميات.</p>
+              </div>
+            </div>
+
+            <div class="capability-map" role="img" aria-label="قدرات الذكاء الاصطناعي: التعلّم، فهم اللغة، التعرّف على الأنماط، وحل المشكلات">
+              <div class="capability-core">
+                <span class="core-monogram" dir="ltr">AI</span>
+                <span class="core-caption">الذكاء الاصطناعي</span>
+              </div>
+              <div class="capability-node node--learn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path>
+                  <path d="M18.5 16l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"></path>
+                </svg>
+                <span>التعلّم</span>
+              </div>
+              <div class="capability-node node--lang">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 6h9M8.5 4v2M6 10c0 3 2.4 5.4 5.5 6.2M11.5 6c0 4-2 7.2-5.5 9"></path>
+                  <path d="M13 20l4-9 4 9M14.6 17h4.8"></path>
+                </svg>
+                <span>فهم اللغة</span>
+              </div>
+              <div class="capability-node node--patterns">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" rx="2"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="2"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="2"></rect>
+                  <path d="M14 17.5h7M17.5 14v7"></path>
+                </svg>
+                <span>التعرّف على الأنماط</span>
+              </div>
+              <div class="capability-node node--solve">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18h6M10 21h4"></path>
+                  <path d="M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.5 1 2.5h6c0-1 .3-1.7 1-2.5A6 6 0 0 0 12 3z"></path>
+                </svg>
+                <span>حل المشكلات</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 3: How it works -->
+        <section class="slide" data-slide="3" data-title="كيف يعمل الذكاء الاصطناعي؟" aria-label="الشريحة 3: كيف يعمل الذكاء الاصطناعي؟">
+          <div class="slide-inner">
+            <div class="section-head">
+              <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>آلية العمل</p>
+              <h2 class="slide-title">كيف يعمل الذكاء الاصطناعي؟</h2>
+              <p class="section-intro">رحلة بسيطة من المعلومة الأولى إلى الإجابة النهائية.</p>
+            </div>
+
+            <div class="flow" role="list" aria-label="مراحل عمل الذكاء الاصطناعي">
+              <article class="flow-step" role="listitem">
+                <span class="step-number" dir="ltr">01</span>
+                <span class="step-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse>
+                    <path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"></path>
+                  </svg>
+                </span>
+                <h3>البيانات</h3>
+                <p>المعلومات التي يتعلم منها النظام.</p>
+              </article>
+
+              <div class="flow-arrow" aria-hidden="true"><span class="arrow-desktop">←</span><span class="arrow-mobile">↓</span></div>
+
+              <article class="flow-step flow-step--violet" role="listitem">
+                <span class="step-number" dir="ltr">02</span>
+                <span class="step-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="6" cy="6" r="2.5"></circle><circle cx="18" cy="6" r="2.5"></circle><circle cx="12" cy="18" r="2.5"></circle>
+                    <path d="M8 7.5l3 8M16 7.5l-3 8M8.5 6h7"></path>
+                  </svg>
+                </span>
+                <h3>التعلّم الآلي</h3>
+                <p>اكتشاف الأنماط من البيانات.</p>
+              </article>
+
+              <div class="flow-arrow" aria-hidden="true"><span class="arrow-desktop">←</span><span class="arrow-mobile">↓</span></div>
+
+              <article class="flow-step" role="listitem">
+                <span class="step-number" dir="ltr">03</span>
+                <span class="step-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 17l5-5 4 3 7-8"></path><path d="M15 7h5v5"></path>
+                  </svg>
+                </span>
+                <h3>التدريب</h3>
+                <p>تحسين أداء النموذج باستخدام الأمثلة.</p>
+              </article>
+
+              <div class="flow-arrow" aria-hidden="true"><span class="arrow-desktop">←</span><span class="arrow-mobile">↓</span></div>
+
+              <article class="flow-step flow-step--violet" role="listitem">
+                <span class="step-number" dir="ltr">04</span>
+                <span class="step-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"></circle>
+                  </svg>
+                </span>
+                <h3>النتائج</h3>
+                <p>تقديم توقعات أو إجابات بناءً على ما تعلمه.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: Applications -->
+        <section class="slide" data-slide="4" data-title="استخدامات الذكاء الاصطناعي في حياتنا" aria-label="الشريحة 4: استخدامات الذكاء الاصطناعي في حياتنا">
+          <div class="slide-inner">
+            <div class="section-head section-head--center">
+              <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>تطبيقات عملية</p>
+              <h2 class="slide-title">استخدامات الذكاء الاصطناعي في حياتنا</h2>
+            </div>
+
+            <div class="apps-grid">
+              <article class="app-card">
+                <span class="app-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 9l9-4 9 4-9 4z"></path><path d="M7 11v5c0 1.2 2.2 2.2 5 2.2s5-1 5-2.2v-5M21 9v6"></path>
+                  </svg>
+                </span>
+                <div class="app-body">
+                  <h3>التعليم</h3>
+                  <p>المساعدة في التعلم وتخصيص المحتوى.</p>
+                </div>
+                <span class="app-index" dir="ltr">01</span>
+              </article>
+
+              <article class="app-card app-card--medical">
+                <span class="app-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20.8 8.6c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10A4.8 4.8 0 0 1 12 5.8a4.8 4.8 0 0 1 8.8 2.8z"></path>
+                    <path d="M7 12h3l1.5-3 2 6 1.5-3h3"></path>
+                  </svg>
+                </span>
+                <div class="app-body">
+                  <h3>الطب</h3>
+                  <p>دعم تحليل الصور والمعلومات الطبية.</p>
+                </div>
+                <span class="app-index" dir="ltr">02</span>
+              </article>
+
+              <article class="app-card">
+                <span class="app-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 6h9M8.5 4v2M6 10c0 3 2.4 5.4 5.5 6.2M11.5 6c0 4-2 7.2-5.5 9"></path>
+                    <path d="M13 20l4-9 4 9M14.6 17h4.8"></path>
+                  </svg>
+                </span>
+                <div class="app-body">
+                  <h3>الترجمة</h3>
+                  <p>تسهيل التواصل بين اللغات.</p>
+                </div>
+                <span class="app-index" dir="ltr">03</span>
+              </article>
+
+              <article class="app-card app-card--transport">
+                <span class="app-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"></path>
+                    <circle cx="12" cy="10" r="2.5"></circle>
+                  </svg>
+                </span>
+                <div class="app-body">
+                  <h3>النقل</h3>
+                  <p>المساعدة في تحسين المسارات وأنظمة القيادة.</p>
+                </div>
+                <span class="app-index" dir="ltr">04</span>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: Pros and challenges -->
+        <section class="slide" data-slide="5" data-title="المميزات والتحديات" aria-label="الشريحة 5: المميزات والتحديات">
+          <div class="slide-inner">
+            <div class="section-head section-head--center">
+              <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>صورة متوازنة</p>
+              <h2 class="slide-title">المميزات والتحديات</h2>
+            </div>
+
+            <div class="balance-grid">
+              <article class="balance-panel panel--pros">
+                <header>
+                  <span class="panel-icon">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path>
+                    </svg>
+                  </span>
+                  <div>
+                    <h3>المميزات</h3>
+                    <p>ما يقدّمه الذكاء الاصطناعي من قيمة</p>
+                  </div>
+                </header>
+                <ul class="check-list">
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"></path></svg></span><span>توفير الوقت والجهد.</span></li>
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"></path></svg></span><span>تحليل كميات كبيرة من البيانات.</span></li>
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"></path></svg></span><span>دعم الابتكار والإنتاجية.</span></li>
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4L19 6"></path></svg></span><span>المساعدة في حل المشكلات.</span></li>
+                </ul>
+              </article>
+
+              <article class="balance-panel panel--cons">
+                <header>
+                  <span class="panel-icon">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 3l9 16H3z"></path><path d="M12 9v5M12 17h.01"></path>
+                    </svg>
+                  </span>
+                  <div>
+                    <h3>التحديات</h3>
+                    <p>نقاط تحتاج إلى وعي وتنظيم</p>
+                  </div>
+                </header>
+                <ul class="check-list">
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"></path><path d="M12 10v4M12 17h.01"></path></svg></span><span>حماية الخصوصية.</span></li>
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"></path><path d="M12 10v4M12 17h.01"></path></svg></span><span>التحيز في البيانات.</span></li>
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"></path><path d="M12 10v4M12 17h.01"></path></svg></span><span>الاعتماد المفرط على التقنية.</span></li>
+                  <li><span class="list-mark"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"></path><path d="M12 10v4M12 17h.01"></path></svg></span><span>الحاجة إلى الاستخدام المسؤول.</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 6: Future and closing -->
+        <section class="slide slide--closing" data-slide="6" data-title="المستقبل والخاتمة" aria-label="الشريحة 6: المستقبل والخاتمة">
+          <div class="slide-inner future-grid">
+            <div class="copy">
+              <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>الخطوة التالية</p>
+              <h2 class="slide-title">نحو مستقبل أكثر ذكاءً</h2>
+              <p class="lead">من المتوقع أن يواصل الذكاء الاصطناعي تأثيره في التعليم والرعاية الصحية والأعمال والحياة اليومية. ومع هذا التطور، يبقى الاستخدام المسؤول والإشراف البشري ضروريين لضمان أن تكون التقنية في خدمة الإنسان.</p>
+              <blockquote class="closing-quote">الذكاء الاصطناعي أداة تصنع الفرص، والإنسان هو من يحدد كيفية استخدامها.</blockquote>
+              <p class="thanks">شكرًا لحسن استماعكم.</p>
+            </div>
+
+            <div class="future-visual" aria-hidden="true">
+              <svg class="future-art" viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <defs>
+                  <radialGradient id="dawnGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".55"></stop>
+                    <stop offset="60%" stop-color="#38BDF8" stop-opacity=".22"></stop>
+                    <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <linearGradient id="horizonGradient" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#8B5CF6"></stop>
+                    <stop offset="100%" stop-color="#38BDF8"></stop>
+                  </linearGradient>
+                </defs>
+                <circle cx="230" cy="225" r="175" fill="url(#dawnGlow)"></circle>
+                <circle cx="230" cy="225" r="88" fill="none" stroke="url(#horizonGradient)" stroke-width="1.6" opacity=".55"></circle>
+                <path d="M30 300 Q230 160 430 300" fill="none" stroke="url(#horizonGradient)" stroke-width="2" opacity=".9"></path>
+                <path d="M70 335 Q230 225 390 335" fill="none" stroke="url(#horizonGradient)" stroke-width="1.6" opacity=".7"></path>
+                <path d="M110 368 Q230 285 350 368" fill="none" stroke="url(#horizonGradient)" stroke-width="1.4" opacity=".5"></path>
+                <line x1="30" y1="300" x2="430" y2="300" stroke="url(#horizonGradient)" stroke-width="1.2" opacity=".45"></line>
+                <g fill="#F8FAFC">
+                  <circle cx="230" cy="180" r="4"></circle>
+                  <circle cx="140" cy="248" r="3.5" opacity=".8"></circle>
+                  <circle cx="320" cy="248" r="3.5" opacity=".8"></circle>
+                  <circle cx="230" cy="300" r="3" opacity=".7"></circle>
+                </g>
+              </svg>
+              <span class="future-word" dir="ltr">FUTURE</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="controlbar">
+      <button id="prevBtn" class="nav-btn nav-btn--prev" type="button" disabled aria-label="الشريحة السابقة">
+        <span class="nav-arrow" aria-hidden="true">→</span>
+        <span class="nav-label">السابق</span>
+      </button>
+
+      <div class="progress-wrap">
+        <div class="progress-track" id="progressTrack" role="progressbar" aria-label="تقدّم العرض" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1">
+          <span class="progress-fill" id="progressFill"></span>
+        </div>
+        <div class="progress-dots" id="progressDots" role="group" aria-label="الانتقال المباشر إلى شريحة"></div>
+      </div>
+
+      <button id="nextBtn" class="nav-btn nav-btn--next" type="button" aria-label="الشريحة التالية">
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span class="nav-label">التالي</span>
+      </button>
+    </footer>
+
+    <p id="slideAnnouncer" class="sr-only" aria-live="polite"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
